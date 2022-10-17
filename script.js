@@ -24,12 +24,13 @@ class Calculator{
 	}
 	
 	clearCurrent(){
-		this.currentOperand = ''
+		this.currentOperand = '0'
 	}
 	
 	delete(){
-		this.currentOperand = this.currentOperand.toString().slice(0, -1)
-
+		if(this.currentOperand != 0)
+			this.currentOperand = this.currentOperand.toString().slice(0, -1)
+		if(this.currentOperand == '') this.currentOperand = 0
 	}
 	
 	appendNumber(number){
