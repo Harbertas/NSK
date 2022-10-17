@@ -5,107 +5,40 @@
     <title>Naudotoja sasajos kurimas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
 	<div class="main">
-			<nav class="nav-top">
-				<ul class="ul-top">
-					<li class="li-top"><a href="#">Shipment & Payment</a></li>
-					<li class="li-top"><a href="#">Product refund</a></li>
-					<li class="li-top"><a href="#">#FAQ</a></li>
-				</ul>
-			</nav>
-			<nav class="nav-bottom">
-				<input type="checkbox" id="check">
-				<label for="check" class="checkbtn">
-					<i class="fa fa-bars"></i>
-				</label>
-				<label class="logo">ShopX</label>
-				<ul class="ul-bottom">
-					<li class="li-bottom"><a href="index.html">Home</a></li>
-					<li class="li-bottom"><a href="#">About</a></li>
-					<li class="li-bottom"><a href="#">Services</a></li>
-					<li class="li-bottom"><a href="#">Contact</a></li>
-					<li class="li-bottom"><a href="#">Feedback</a></li>
-					<li class="sign-in li-bottom"><a href="my_cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart</a></li>
-				</ul>
-			</nav>
-			<div class="announcment">
-				<div class="grid-item">
-					<i class="fa fa-car"></i>
-					<span class="announcment-item">Fast delivery</span>
-				</div>
-				<div class="grid-item">
-					<i class="fa fa-shopping-bag"></i>
-					<span class="announcment-item">Collect in 4 hours</span>
-				</div>
+		<div class="grid-calculator">
+			<div class="output">
+				<div data-previous class="previous"></div>
+				<div data-current class="current">0</div>
 			</div>
-		<div class="content">
-			<div class="content-item content-item-1">
-				<h1 style="color: #306bf5"> Sell-Out !!!</h1>
-				<br>
-				<hr>
-			</div>
-			<div class="content-item content-item-2">
-				<a href="#">
-					<img src="emptyImage.jpg" alt="image">
-					<p>Phones</p>
-				</a>
-			</div>
-			<div class="content-item content-item-3">
-				<a href="#">
-					<img src="emptyImage.jpg" alt="image">
-					<p>Computer</p>
-				</a>
-			</div>
-			<div class="content-item content-item-4">
-				<a href="#">
-					<img src="emptyImage.jpg" alt="image">
-					<p>Household Appliances</p>
-				</a>
-			</div>
-			<div class="content-item content-item-2">
-				<a href="#">
-					<img src="emptyImage.jpg" alt="image">
-					<p>Phones</p>
-				</a>
-			</div>
-			<div class="content-item content-item-3">
-				<a href="#">
-					<img src="emptyImage.jpg" alt="image">
-					<p>Computer</p>
-				</a>
-			</div>
-			<div class="content-item content-item-4">
-				<a href="#">
-					<img src="emptyImage.jpg" alt="image">
-					<p>Household Appliances</p>
-				</a>
-			</div>
-						<div class="content-item content-item-2">
-				<a href="#">
-					<img src="emptyImage.jpg" alt="image">
-					<p>Phones</p>
-				</a>
-			</div>
-			<div class="content-item content-item-3">
-				<a href="#">
-					<img src="emptyImage.jpg" alt="image">
-					<p>Computer</p>
-				</a>
-			</div>
-			<div class="content-item content-item-4">
-				<a href="#">
-					<img src="emptyImage.jpg" alt="image">
-					<p>Household Appliances</p>
-				</a>
-			</div>
+			<button data-all-clear class="operation-top span-two">C</button>
+			<button data-delete-current class="operation-top">CE</button>
+			<button data-delete class="operation-top"><i class="fa-solid fa-delete-left"></i></button>
+			<button data-number class="operation">π</button>
+			<button data-operation class="operation">^2</button>
+			<button data-operation class="operation">√</button>
+			<button data-operation class="operation">÷</button>
+			<button data-number class="number">7</button>
+			<button data-number class="number">8</button>
+			<button data-number class="number">9</button>
+			<button data-operation class="operation">*</button>
+			<button data-number class="number">4</button>
+			<button data-number class="number">5</button>
+			<button data-number class="number">6</button>
+			<button data-operation class="operation">-</button>
+			<button data-number class="number">1</button>
+			<button data-number class="number">2</button>
+			<button data-number class="number">3</button>
+			<button data-operation class="operation">+</button>
+			<button data-number class="operation">.</button>
+			<button data-number class="number">0</button>
+			<button data-equal class="operation span-two">=</button>
 		</div>
-	<footer>
-		<p>All rights reserved ©</p>
-		<p>Hubertas Klangauskas</p>
-	</footer>
 	</div>
   </body>
 </html>
