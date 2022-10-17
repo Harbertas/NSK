@@ -18,7 +18,7 @@ class Calculator{
 	}
 	
 	clear(){
-		this.currentOperand = ''
+		this.currentOperand = '0'
 		this.previousOperand = ''
 		this.operation = ''
 	}
@@ -34,16 +34,18 @@ class Calculator{
 	
 	appendNumber(number){
 		if(this.currentOperand == '0') this.currentOperand = number.toString()
+		else if(this.currentOperand == 'MathError') this.currentOperand = number.toString()
 		else if(number === '.' && this.currentOperand.includes('.')) return
-		else if(number == 'π'){
-			this.currentOperand = 3.14159265359
-		}
 		else
 			this.currentOperand = this.currentOperand.toString() + number.toString()
+		if(number == 'π'){
+			this.currentOperand = 3.14159265359
+		}
 	}
 	
 	chooseOperation(operation){
-		if(this.currentOperand === ''){
+		if(this.currentOperand === 'MathError') return
+		else if(this.currentOperand === ''){
 			if(this.previousOperand == '') return
 			this.operation = operation
 			return
@@ -85,6 +87,12 @@ class Calculator{
 				this.previousOperand = ''
 				break
 			case '÷':
+				if(current == '0'){
+					this.currentOperand = 'MathError'
+					this.previousOperand = ''
+					this.operation = undefined
+					break
+				}
 				computation = prev / current
 				this.currentOperand = computation
 				this.operation = undefined
@@ -97,6 +105,12 @@ class Calculator{
 				this.previousOperand = ''
 				break
 			case '√':
+				if(current < 0){
+					this.currentOperand = 'MathError'
+					this.previousOperand = ''
+					this.operation = undefined
+					break
+				}
 				computation = Math.sqrt(current)
 				this.currentOperand = computation
 				this.operation = undefined
