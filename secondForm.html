@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSK 3 užduotis</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="main">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet">
+		<section class="step-wizard">
+			<ul class="step-wizard-list">
+				<li class="step-wizard-item">
+					<span class="progress-count">1</span>
+					<span class="progress-label">Personal Info</span>
+				</li>
+				<li class="step-wizard-item current-item">
+					<span class="progress-count">2</span>
+					<span class="progress-label">Vehicle Info</span>
+				</li>
+				<li class="step-wizard-item">
+					<span class="progress-count">4</span>
+					<span class="progress-label">Success</span>
+				</li>
+			</ul>
+		</section>
+  <div class="container" id="container">
+    <form id="form1" action="awaiting.html" method="GET">
+	<i class="fa fa-car"></i>
+      <div class="input-group">
+        <label>Is the vehicle registered?</label>
+        <input type="radio" id="yes" name="registered" value="yes">
+		<label id="yesc">Yes</label>
+        <input type="radio" id="no" name="registered" value ="no">
+		<label id="noc">No</label>
+      </div>
+	  
+	   <div class="input-group" id="VIN">
+        <label>VIN</label>
+        <input type="text" placeholder="Enter The VIN Number" id="vinNumber" maxlength="17">
+		<span id="VIN-error"></span>
+      </div>
+	  
+	  <div class="input-group" id="upcomingOwnerID">
+        <label>Upcoming Owner's ID</label>
+        <input type="text" placeholder="Enter The Upcoming Owner's ID" id="uoidNumber" maxlength="11">
+		<span id="UOID-error"></span>
+      </div>
+	  
+	  <div class="input-group" id="license">
+        <label>License Plate</label>
+        <input type="text" placeholder="Enter License Plate Number" id="LP" maxlength="6">
+		<span id="LP-error"></span>
+      </div>
+	  
+	  <div class="input-group" id="ownerID">
+        <label>Owner ID</label>
+        <input type="text" placeholder="Enter Owner ID" id="OID" maxlength="11">
+		<span id="OID-error"></span>
+      </div>
+	  
+	  <div class="input-group" id="insurance">
+        <label>Starts On</label>
+        <input type="date" id="insuranceDate">
+      </div>
+	  
+	  <div class="input-group" id="insuranceDuration">
+        <label>Insurance Duration (Months)</label>
+        <select id="insuranceSpan">
+			<option value="1">1</option>
+			<option value="3">3</option>
+			<option value="6">6</option>
+			<option value="12">12</option>
+	    </select>
+      </div>
+
+    <button id="submit" disabled>Next</button>
+	<i class="fa fa-arrow-left" id="back" aria-hidden="true"></i>
+  </form>
+  </div>
+  </div>
+  <script src="script2.js"></script>
+</body>
+</html>

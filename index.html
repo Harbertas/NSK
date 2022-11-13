@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSK 3 užduotis</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="main">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet">
+		<section class="step-wizard">
+			<ul class="step-wizard-list">
+				<li class="step-wizard-item current-item">
+					<span class="progress-count">1</span>
+					<span class="progress-label">Personal Info</span>
+				</li>
+				<li class="step-wizard-item">
+					<span class="progress-count">2</span>
+					<span class="progress-label">Vehicle Info</span>
+				</li>
+				<li class="step-wizard-item">
+					<span class="progress-count">4</span>
+					<span class="progress-label">Success</span>
+				</li>
+			</ul>
+		</section>
+		<div class="container" id="container">
+			<form id="form1" action="secondForm.html" method="GET">
+				<i class="fa fa-pencil" aria-hidden="true"></i>
+				<div class="input-group">
+					<label>First Name</label>
+					<input type="text" placeholder="Enter your first name" id="fname">
+					<span id="fname-error"></span>
+				</div>
+
+				<div class="input-group">
+					<label>Last Name</label>
+					<input type="text" placeholder="Enter your last name" id="lname">
+					<span id="lname-error"></span>
+				</div>
+
+				<div class="input-group">
+					<label>E-mail</label>
+					<input type="email" placeholder="Enter E-mail" id="email">
+					<span id="email-error"></span>
+				</div>   
+				<button id="submit" disabled>Next</button>
+			</form>
+		</div>
+	</div>
+	<script src="script.js"></script>
+
+</body>
+</html>
