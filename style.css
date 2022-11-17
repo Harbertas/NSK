@@ -226,8 +226,6 @@ form #submit:disabled{
 	display: none;
 }
 
-button{
-}
 
 #appreciation, h1, h2{
 	text-align: center;
@@ -247,8 +245,12 @@ button{
 		position: relative;
 		font-size: 14px;
 	}
+    .input-group label{
+        margin-left: -20px;
+    }
 	.input-group input, input::placeholder, .input-group select{
 		font-size: 14px;
+        margin: auto;
 	}
 	.input-group #yesc{
 		margin-top: 40px;
@@ -271,8 +273,17 @@ button{
 }
 @media (max-width: 400px) or (max-height: 500px){
 	.step-wizard{
-		width: 300px;
+		width: 250px;
 	}
+    .step-wizard-item{
+		min-width: 70px;
+	}
+    .progress-label{
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 10px;
+        margin-left: -5px;
+    }
 	.container form{
 		max-width: 250px;
 		padding: 50px 30px 20px;
@@ -282,8 +293,12 @@ button{
 		position: relative;
 		font-size: 11px;
 	}
+    .input-group label{
+        margin-left: -20px;
+    }
 	.input-group input, input::placeholder, .input-group select{
 		font-size: 11px;
+        margin: auto;
 	}
 	.input-group #yesc{
 		margin-top: 40px;
@@ -292,6 +307,6 @@ button{
 
 	.input-group #noc{
 		margin-top: 40px;
-		margin-left: -45px;
+		margin-left: -50px;
 	}
 }
