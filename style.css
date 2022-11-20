@@ -1,7 +1,7 @@
 .step-wizard {
     justify-content: center;
     align-items: center;
-	width: 600px;
+	width: 700px;
 	margin: auto;
 }
 .step-wizard-list{
@@ -118,8 +118,8 @@ body{
 
 .container{
     width: 100%;
-    height: 500px;
     margin: auto;
+	padding-bottom: 50px;
     align-items: center;
     justify-content: center;
 }
@@ -134,7 +134,7 @@ body{
     margin: auto;
 	margin-top: 100px;
 }
-.fa-pencil, .fa-car, .fa-paper-plane{
+.fa-pencil, .fa-wpforms, .fa-briefcase, .fa-paper-plane{
 	position: absolute;
 	margin-top: -50px;
     left: 50%;
@@ -173,7 +173,7 @@ body{
     font-size: 14px;
 }
 
-form #submit{
+form #submit, #submitForm2, #submitForm3{
     background: #141a34;
     color: #fff;
     border-radius: 4px;
@@ -192,7 +192,7 @@ form .fa-arrow-left{
 	bottom: 1px;
 	left: 1px;
 }
-form #submit:disabled{
+form #submit:disabled, #submitForm2:disabled, #submitForm3:disabled{
     background: gray;
 	cursor: context-menu;
 }
@@ -205,14 +205,51 @@ form #submit:disabled{
 	color: red;
 }
 
+.input-group #yesMarried, #noMarried{
+	margin-left: -50px;
+}
+
+.input-group #yesSN, #noSN{
+	margin-left: -150px;
+	margin-top: 40px;
+}
+
+.input-group #yescSN, #nocSN{
+	margin-left: -50px;
+}
+
+.input-group #married{
+	margin-top: 40px;
+	margin-left: -140px;
+}
+
+.input-group #notMarried{
+	margin-top: 40px;
+	margin-left: -140px;
+}
+
+.input-group #yes, #no{
+	margin-left: -50px;
+}
+
+.input-group #male{
+	margin-top: 40px;
+	margin-left: -150px;
+}
+
+.input-group #female{
+	margin-top: 40px;
+	margin-left: -160px;
+}
+
 .input-group #yesc{
 	margin-top: 40px;
-	margin-left: -115px;
+	margin-left: -140px;
 }
 
 .input-group #noc{
 	margin-top: 40px;
-	margin-left: -115px;
+	margin-left: -137px;
 }
 
 .input-group span i{
@@ -222,7 +259,7 @@ form #submit:disabled{
 	color: red;
 }
 
-#license, #ownerID, #VIN, #upcomingOwnerID, #insurance, #insuranceDuration{
+#license, #ownerID, #VIN, #upcomingOwnerID, #insurance, #insuranceDuration, #schoolNameDiv, #schoolYearDiv, #HigherNameDiv, #HigherYearDiv, #HigherDegree, #form2, #spouseN, #spouseS, #spouseSS, #form3, #studiesStage, #studiesCourse, #studiesInstitution, #jobInst, #jobDut, #unemployed, #vacation, #job-type, #job-area{
 	display: none;
 }
 
@@ -232,7 +269,16 @@ form #submit:disabled{
 	padding: 10px;
 }
 
-@media (max-width: 600px) or (max-height: 800px){
+@media (max-width: 700px){
+	.step-wizard-item{
+		min-width: 100px;
+	}
+	.step-wizard{
+		width: 700px;
+	}
+}
+
+@media (max-width: 700px) {
 	.step-wizard{
 		width: 500px;
 	}
@@ -252,6 +298,15 @@ form #submit:disabled{
 		font-size: 14px;
         margin: auto;
 	}
+	
+	.input-group #notMarried{
+		margin-right: -10px
+	}
+	
+	.input-group #yes{
+		margin-left: -35px;
+	}
+	
 	.input-group #yesc{
 		margin-top: 40px;
 		margin-left: -80px;
@@ -263,7 +318,7 @@ form #submit:disabled{
 	}
 }
 
-@media (max-width: 500px) or (max-height: 500px){
+@media (max-width: 500px){
 	.step-wizard-item{
 		min-width: 100px;
 	}
@@ -271,9 +326,9 @@ form #submit:disabled{
 		width: 400px;
 	}
 }
-@media (max-width: 400px) or (max-height: 500px){
+@media (max-width: 400px) or (max-height: 630px){
 	.step-wizard{
-		width: 250px;
+		width: 280px;
 	}
     .step-wizard-item{
 		min-width: 70px;
@@ -285,7 +340,7 @@ form #submit:disabled{
         margin-left: -5px;
     }
 	.container form{
-		max-width: 250px;
+		width: 280px;
 		padding: 50px 30px 20px;
 		background: #fff;
 		border-radius: 4px;
@@ -300,11 +355,38 @@ form #submit:disabled{
 		font-size: 11px;
         margin: auto;
 	}
+	.input-group #yescSN, #nocSN{
+		margin-left: -20px;
+	}
+	.input-group #yesMarried{
+		margin-left: 30px;
+		flex-basis: 20%;
+	}
+	.input-group #noMarried{
+		margin-left: 25px;
+		flex-basis: 20%;
+	}
+	.input-group #married{
+		margin-left: -140px;
+		flex-basis: 20%;
+	}
+	.input-group #notMarried{
+		margin-right: 5px;
+		flex-basis: 20%;
+	}
+	.input-group #yes{
+		margin-left: -30px;
+	}
+	.input-group #no{
+		margin-left: -85px;
+	}
+	.input-group #male{
+		margin-right: 70px;
+	}
 	.input-group #yesc{
 		margin-top: 40px;
 		margin-left: -50px;
 	}
-
 	.input-group #noc{
 		margin-top: 40px;
 		margin-left: -50px;

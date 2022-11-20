@@ -19,10 +19,14 @@
 				</li>
 				<li class="step-wizard-item">
 					<span class="progress-count">2</span>
-					<span class="progress-label">Vehicle Info</span>
+					<span class="progress-label">Social Info</span>
 				</li>
 				<li class="step-wizard-item">
-					<span class="progress-count current-item">4</span>
+					<span class="progress-count">3</span>
+					<span class="progress-label">Job Info</span>
+				</li>
+				<li class="step-wizard-item current-item">
+					<span class="progress-count">4</span>
 					<span class="progress-label">Success</span>
 				</li>
 			</ul>
@@ -32,11 +36,17 @@
 	<i class="fa fa-paper-plane"></i>
 	<h1>Thank you!</h1>
 	<h2>Your information has been received!</h2>
-    <p id="appreciation">Might take approximately 2 hours, till you receive insurance offer from Us.</p>
+    <p id="appreciation">Might take approximately 2 hours, till you receive a letter from Us.</p>
 	<i class="fa fa-arrow-left" id="back" aria-hidden="true"></i>
   </form>
   </div>
   </div>
-  <script src="script2.js"></script>
+  <script>
+	let arrow = document.getElementById("back");
+	arrow.addEventListener("click", previousPage);
+	function previousPage(){
+		window.location="index.html";
+	}
+  </script>
 </body>
 </html>
