@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSK 4 užduotis</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="main">
+		<form id="form">
+			<div class="formInfo">
+				<p>#1 Player Name</p>
+				<input type="text" id="firstPlayer" placeholder="Insert Name #1" maxlength="25">
+				<p>#2 Player Name</p>
+				<input type="text" id="secondPlayer" placeholder="Insert Name #2" maxlength="25">
+				<input type="submit" class="span-two" id="submit" value="Start Game" disabled>
+			</div>
+		</form>
+		<div id="game">
+			<h1 class="span-three title">Tic Tac Toe</h1>
+			<h3 class="span-three title">Player <span class="display-player playerX">X</span>'s <span class="icon">(x)</span> Turn</h3>
+			<h2 class="span-three title"><span class="playerX player1">0</span>:<span class="playerO player2">0</span></h2>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+			
+			<section class="span-three announcer hide"></section>
+			<button id="reset">Reset</button>
+			<span></span>
+			<button id="resetScore">0:0</button>
+
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
